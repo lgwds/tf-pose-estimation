@@ -16,5 +16,5 @@ cd ../..
 cd models/graph/cmu
 bash download.sh
 cd ../../..
-#python run.py --model=mobilenet_thin --resize=432x368 --image=./images/p1.jpg
-python run_webcam.py --model=mobilenet_thin --resize=432x368 --camera=0
+python run.py --model=mobilenet_thin --resize=432x368 --image=./images/p1.jpg
+#python run_webcam.py --model=mobilenet_thin --resize=432x368 --camera=0

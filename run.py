@@ -51,6 +51,15 @@ if __name__ == '__main__':
     logger.info('inference image: %s in %.4f seconds.' % (args.image, elapsed))
 
     image = TfPoseEstimator.draw_humans(image, humans, imgcopy=False)
+    #START Luki
+    for human in humans:
+    # draw point
+        for i in range(common.CocoPart.Background.value):
+            if i not in human.body_parts.keys():
+                continue
+            logger.info('part %s has these coordintates: %s' % (common.CocoPart(i), human.body_parts[i]))   
+            # use center = (int(body_part.x * image_w + 0.5), int(body_part.y * image_h + 0.5)) to get abs coords
+    #END Luki
 
     try:
         import matplotlib.pyplot as plt
